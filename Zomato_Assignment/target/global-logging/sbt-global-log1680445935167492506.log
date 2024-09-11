@@ -1,0 +1,21 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(test, Some(93c07e7f-5077-4e28-aa3e-26ae5e8e0fee), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/abhinav/Desktop/zomato/target/scala-2.13/test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMainTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Top N Restaurants by Rating[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Top N Restaurants by Rating and Location[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Top N Restaurants by Rating and Votes[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Dishes Liked Count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Distinct Locations Count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Distinct Cuisines in Location[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Distinct Cuisines in Each Location[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Cuisine Type Count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 10 seconds, 523 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 8[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 8, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 15 s, completed Sep 6, 2024 6:19:22 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m

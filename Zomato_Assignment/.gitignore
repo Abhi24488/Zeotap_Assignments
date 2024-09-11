@@ -1,0 +1,28 @@
+# Ignore build artifacts
+target/
+*.jar
+*.war
+
+# Ignore SBT and IDE-specific metadata
+.bst/
+
+project/
+
+build.sbt
+
+# Ignore IDE files
+.idea/
+*.iml
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore environment-specific files
+.env
+
+# Ignore sensitive data
+config/secrets.yml

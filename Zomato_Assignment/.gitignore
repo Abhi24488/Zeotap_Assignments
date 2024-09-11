@@ -1,0 +1,6 @@
+# Ignore specific directories and files
+.bsp/
+.idea/
+target/
+build.sbt
+project/

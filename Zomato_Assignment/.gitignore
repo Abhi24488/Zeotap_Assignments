@@ -4,3 +4,5 @@
 target/
 build.sbt
 project/
+# Ignore .DS_Store file
+.DS_Store

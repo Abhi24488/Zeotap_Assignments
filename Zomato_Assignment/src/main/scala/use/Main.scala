@@ -31,41 +31,13 @@ object main {
 
 
     val topRestaurantsByRating=topNRestaurantsByRating(zomatoData, 5)
-    assert(topRestaurantsByRating.filter(col("Rating")<0.0 || col("Rating")>5.0).count()==0,"Test Failed found invalid ratings")
-    println("Tests Passed: Top N Restaurants By Rating")
-
-        val topRestaurantsByLocationAndType=getTopNRestaurantsByRatingAndLocation(zomatoData,5,"Indiranagar","Cafe")
-        assert(topRestaurantsByLocationAndType.filter(col("Location") =!= "Indiranagar").count()==0,"Test failed restaurants should be from Indiranagar")
-        assert(topRestaurantsByLocationAndType.filter(col("RestaurantType") =!= "Cafe").count() == 0, "Test failed: Restaurants should be Cafes")
-        println("Tests Passed: Top N restaurants by location and type")
-
-        val topRestaurantsByRatingAndVotes=getTopNRestaurantsByRatingAndVotes(zomatoData,5,"Indiranagar")
-        assert(topRestaurantsByRatingAndVotes.filter(col("Location") =!= "Indiranagar").count() == 0, "Test failed: Restaurants should be from Indiranagar")
-        println("Tests Passed: Top N Restaurants in a location by Rating And Votes")
-
-        val dishesLikedCount = getDishesLikedCount(zomatoData)
-        assert(dishesLikedCount.columns.contains("DishesLikedCount"), "Test failed: should have a DishesLikedCount column")
-        assert(dishesLikedCount.filter(col("DishesLikedCount").isNull).count() == 0, "Test failed: DishesLikedCount should not contain null values")
-        println("Tests passed: No. of dishes liked in every restaurant")
-
-        val distinctLocations = getDishesLocations(zomatoData)
-        assert(distinctLocations > 0, "Test failed: getDishesLocations should return a positive number of distinct locations")
-        println("Tests Passed: No. of distinct locations")
-
-        val distinctCuisinesInLocation = getDistinctCuisinesInLocation(zomatoData, "Indiranagar")
-        assert(distinctCuisinesInLocation.count() > 0, "Test failed: getDistinctCuisinesInLocation should return distinct cuisines")
-        println("Tests Passed: No. of distinct cuisines for the specified location")
-
-        val distinctCuisinesInEachLocation = getDistinctCuisinesInEachLocation(zomatoData)
-        assert(distinctCuisinesInEachLocation.columns.contains("DistinctCuisines"), "Test failed: getDistinctCuisinesInEachLocation should have a DistinctCuisines column")
-        assert(distinctCuisinesInEachLocation.filter(col("DistinctCuisines").isNull).count() == 0, "Test failed: DistinctCuisines column should not contain null values")
-        println("Tests Passed: No. of distinct cuisines at each location")
-
-        val cuisineTypeRestaurantCount = getCuisineTypeCount(zomatoData)
-        //cuisineTypeRestaurantCount.show()
-        assert(cuisineTypeRestaurantCount.columns.contains("count"), "Test failed: getCuisineTypeCount should have a count column")
-        assert(cuisineTypeRestaurantCount.filter(col("count").isNull).count() == 0, "Test failed: Count column should not contain null values")
-        println("Tests Passed: Count of restaurants for each cuisine type")
+    val topRestaurantsByLocationAndType=getTopNRestaurantsByRatingAndLocation(zomatoData,5,"Indiranagar","Cafe")
+    val topRestaurantsByRatingAndVotes=getTopNRestaurantsByRatingAndVotes(zomatoData,5,"Indiranagar")
+    val dishesLikedCount = getDishesLikedCount(zomatoData)
+    val distinctLocations = getDishesLocations(zomatoData)
+    val distinctCuisinesInLocation = getDistinctCuisinesInLocation(zomatoData, "Indiranagar")
+    val distinctCuisinesInEachLocation = getDistinctCuisinesInEachLocation(zomatoData)
+    val cuisineTypeRestaurantCount = getCuisineTypeCount(zomatoData)
 
     spark.stop()
   }

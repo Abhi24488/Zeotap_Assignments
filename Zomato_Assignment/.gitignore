@@ -1,0 +1,8 @@
+# Ignore specific directories and files
+.bsp/
+.idea/
+target/
+build.sbt
+project/
+# Ignore .DS_Store file
+.DS_Store
